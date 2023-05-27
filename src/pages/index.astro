@@ -1,0 +1,144 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Button from "../components/Button.astro";
+import IconText from "../components/IconText.astro";
+import TestimonialCard from "../components/TestimonialCard.astro";
+import SignUp from "../components/SignUp.astro";
+---
+
+<Layout title="Fylo">
+  <!-- HEADER -->
+  <section
+    class="flex w-full py-8 items-center justify-center hero px-6"
+  >
+    <div
+      class="flex flex-col items-center justify-center max-w-lg md:max-w-2xl"
+    >
+      <!-- Image -->
+      <div>
+        <img src="/images/illustration-intro.png" />
+      </div>
+      <!-- Header and Text -->
+      <div class="py-8 md:py-8 lg:pt-8 flex flex-col text-center items-center">
+        <h1 class="mb-6">
+          All your files in one secure location, accessible anywhere.
+        </h1>
+        <p class="px-2 md:px-24">
+          Fylo stores all your most important files in one secure location.
+          Access them wherever you need, share and collaborate with friends,
+          family, and co-workers.
+        </p>
+        <div class="my-8 w-48"><Button cta="Get Started" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section
+    class="w-full flex flex-col items-center justify-center py-4 md:py-2 lg:py-12 features px-2 md:px-6"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-20 max-w-5xl">
+      <IconText
+        image="/images/icon-access-anywhere.svg"
+        title="Access your files, anywhere"
+        text="The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere."
+      />
+      <IconText
+        image="/images/icon-security.svg"
+        title="Security you can trust"
+        text="2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files."
+      />
+      <IconText
+        image="/images/icon-collaboration.svg"
+        title="Real-time collaboration"
+        text="Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required."
+      />
+      <IconText
+        image="/images/icon-any-file.svg"
+        title="Store any type of file"
+        text="Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared."
+      />
+    </div>
+  </section>
+
+  <!-- STAY PRODUCTIVE -->
+  <section class="w-full py-20 px-8  md:px-2 productive">
+    <div
+      class="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-12 max-w-6xl m-auto p-6"
+    >
+      <div class="md:w-1/2 flex justify-end">
+        <img src="/images/illustration-stay-productive.png" />
+      </div>
+      <div class="md:w-1/2 flex flex-col justify-center">
+        <div class="flex flex-col justify-start">
+          <h2 class="font-bold mb-4 lg:w-10/12 xl:w-10/12 break-words">
+            Stay productive, <br class="hidden md:inline-block" /> wherever you are
+          </h2>
+          <p>
+            Never let location be an issue when accessing your files. Fylo has
+            you covered for all of your file storage needs.
+          </p>
+          <p>
+            Securely share files and folders with friends, family and colleagues
+            for live collaboration. No email attachments required.
+          </p>
+          <div class="cta text-sm md:text-base">
+            See how Fylo works &nbsp; &nbsp;
+            <div class="absolute inline">
+              <img
+                src="images/icon-arrow.svg"
+                class="inline relative bottom-1/2 right-3"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS-->
+  <section class="p-5 py-20 md:p-24 testimonials">
+    <div class="flex flex-wrap justify-center gap-8">
+      <TestimonialCard
+        name="Satish Patel"
+        title="Founder & CEO, Huddle"
+        image="images/profile-1.jpg"
+        text="Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine."
+        quote={true}
+      />
+      <TestimonialCard
+        name="Bruce McKenzie"
+        title="Founder & CEO, Huddle"
+        image="images/profile-2.jpg"
+        text="Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine."
+        quote={false}
+      />
+      <TestimonialCard
+        name="Iva Boyd"
+        title="Founder & CEO, Huddle"
+        image="images/profile-3.jpg"
+        text="Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine."
+        quote={false}
+      />
+    </div>
+  </section>
+  <!-- NEWSLETTER-->
+  <section class="flex items-center justify-center py-20 px-4 md:px-12 signup">
+    <div class="mb-[-200px]"><SignUp /></div>
+
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    background: url("/images/bg-curvy-desktop.svg") no-repeat bottom center;
+    background-size: contain;
+  }
+  .testimonials,
+  .features,
+  .productive,
+  .signup {
+    background-color: #181f2b;
+  }
+</style>

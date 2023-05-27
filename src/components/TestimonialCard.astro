@@ -1,0 +1,44 @@
+---
+export interface Props {
+  image: string;
+  title: string;
+  text: string;
+  name: string;
+  quote: boolean;
+}
+
+const { image, title, text, name, quote } = Astro.props;
+---
+
+<div
+  class="testimonial rounded-sm max-w-sm pt-9 lg:pt-11 pb-7 px-6 relative z-10"
+>
+  {
+    quote && (
+      <div class="quote-icon absolute">
+        <img class="quote" src="images/bg-quotes.png" />
+      </div>
+    )
+  }
+  <div class="text mb-5">{text}</div>
+  <div class="person flex gap-3">
+    <div class="image align-middle justify-center">
+      <img src={image} class="w-10 h-10 rounded-full" />
+    </div>
+    <div class="flex flex-col attribution">
+      <div class="name font-bold text-sm">{name}</div>
+      <div class="title text-xs">{title}</div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .testimonial {
+    background-color: #202a3c;
+    z-index: 10;
+  }
+  .quote-icon {
+    transform: translate(-2rem, -4.5rem);
+    z-index: -1;
+  }
+</style>

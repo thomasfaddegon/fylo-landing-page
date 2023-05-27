@@ -1,0 +1,200 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+import "@fontsource/open-sans";
+import "@fontsource/raleway/700.css";
+import emailIcon from "./email-icon.png";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <main class="p-0 flex flex-col">
+      <div
+        class="flex justify-center navbar py-4 px-4 bg-base-100 sticky top-0 w-full"
+      >
+        <div class="max-w-6xl flex justify-between items-center w-full">
+          <div class="h-full">
+            <img
+              src="/images/logo.svg"
+              alt="Logo"
+              class="w-24 md:w-32 lg:w-36 h-auto"
+            />
+          </div>
+          <ul
+            class="menu menu-horizontal text-xs md:text-base lg:text-lg md:px-1 md:gap-6 lg:gap-12"
+          >
+            <li><a>Features</a></li>
+            <li><a>Team</a></li>
+            <li><a>Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+      <slot />
+    </main>
+
+    <footer class="bg-[#0B1524] py-6 pt-64">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+          <!-- Column 1 -->
+          <div class="md:col-span-3 md:col-start-1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="md:col-span-3 md:col-start-4 flex flex-col gap-4">
+            <div class="flex flex-row gap-4">
+              <div class="flex justify-center">
+                <img src="phone-icon.png" alt="Phone Icon" class="h-4 w-4">
+              </div>
+              <div>
+                +1-543-123-4567
+              </div>
+            </div>
+            <div class="flex flex-row items-center gap-4">
+              <div class="items-center justify-center">
+                <img src={emailIcon} alt="Email Icon" class="h-4 w-4">
+              </div>
+              <div>
+                example@fylo.com
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Column 3 -->
+          <div class="md:col-span-2 md:col-start-7">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4 -->
+          <div class="md:col-span-2 md:col-start-9">
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 5 -->
+          <div class="md:col-span-2 md:col-start-11">
+            <div class="flex">
+              <div class="mr-4">
+                <img src="icon1.png" alt="Icon 1" class="h-6 w-6">
+              </div>
+              <div class="mr-4">
+                <img src="icon2.png" alt="Icon 2" class="h-6 w-6">
+              </div>
+              <div>
+                <img src="icon3.png" alt="Icon 3" class="h-6 w-6">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+
+<style lang="postcss" is:global>
+  /* :root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      #da62c4 30%,
+      white 60%
+    );
+  } */
+  html {
+    font-family: "Open Sans", system-ui, sans-serif;
+    background-color: #f6f6f6;
+  }
+
+  body {
+    color: #ffffff;
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+  main {
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  h1 {
+    @apply text-4xl font-extrabold text-white;
+    line-height: 60px;
+    font-size: 38px;
+    font-family: "Raleway", system-ui, sans-serif;
+  }
+  h2 {
+    @apply text-4xl font-extrabold text-white;
+    line-height: 50px;
+    font-size: 36px;
+    font-family: "Raleway", system-ui, sans-serif;
+  }
+  h3 {
+    @apply text-4xl font-extrabold text-white;
+    line-height: 50px;
+    font-size: 28px;
+    font-family: "Raleway", system-ui, sans-serif;
+  }
+  h4 {
+    @apply text-white text-xl;
+    font-family: "Raleway", system-ui, sans-serif;
+    font-weight: 700;
+  }
+  p {
+    @apply text-white;
+    margin-bottom: 1rem;
+  }
+  .cta {
+    color: #62e0d9;
+    text-decoration: underline;
+    text-underline-offset: 0.6em;
+  }
+  .navbar{
+    z-index: 100
+  }
+
+
+  @media screen and (max-width: 767px) {
+    h1 {
+      line-height: 36px;
+      font-size: 24px;
+    }
+    h2 {
+      line-height: 24px;
+      font-size: 18px;
+      align-self: center;
+    }
+  }
+</style>
