@@ -9,9 +9,7 @@ import SignUp from "../components/SignUp.astro";
 
 <Layout title="Fylo">
   <!-- HEADER -->
-  <section
-    class="flex w-full py-8 items-center justify-center hero px-6"
-  >
+  <section class="flex w-full py-8 items-center justify-center hero px-6">
     <div
       class="flex flex-col items-center justify-center max-w-lg md:max-w-2xl"
     >
@@ -63,7 +61,7 @@ import SignUp from "../components/SignUp.astro";
   </section>
 
   <!-- STAY PRODUCTIVE -->
-  <section class="w-full py-20 px-8  md:px-2 productive">
+  <section class="w-full py-20 px-8 md:px-2 productive">
     <div
       class="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-12 max-w-6xl m-auto p-6"
     >
@@ -84,13 +82,19 @@ import SignUp from "../components/SignUp.astro";
             for live collaboration. No email attachments required.
           </p>
           <div class="cta text-sm md:text-base">
-            See how Fylo works &nbsp; &nbsp;
-            <div class="absolute inline">
-              <img
-                src="images/icon-arrow.svg"
-                class="inline relative bottom-1/2 right-3"
-              />
-            </div>
+            <a href="#">
+              See how Fylo works &nbsp; &nbsp;
+              <div class="absolute inline">
+                <img
+                  src="images/icon-arrow.svg"
+                  class="inline relative bottom-1/2 right-3"
+                />
+                <!-- <img
+                  src="images/icon-arrow-hover.svg"
+                  class="arrow-hover hidden relative bottom-1/2 right-3"
+                /> -->
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -126,7 +130,6 @@ import SignUp from "../components/SignUp.astro";
   <!-- NEWSLETTER-->
   <section class="flex items-center justify-center py-20 px-4 md:px-12 signup">
     <div class="mb-[-200px]"><SignUp /></div>
-
   </section>
 </Layout>
 
@@ -141,4 +144,10 @@ import SignUp from "../components/SignUp.astro";
   .signup {
     background-color: #181f2b;
   }
+  /* .cta:hover img[src="images/icon-arrow.svg"] {
+    display: none;
+  }
+  .cta:hover img.arrow-hover {
+    display: inline;
+  } */
 </style>
