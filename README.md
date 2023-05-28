@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: https://app.netlify.com/sites/whimsical-sfogliatella-15b07f/overview
+- Live Site URL: https://whimsical-sfogliatella-15b07f.netlify.app/
 
 ## My process
 
