@@ -12,6 +12,8 @@ import phoneIcon from "../../public/images/icon-phone.svg";
 import twitterIcon from "../../public/images/icon-twitter.png";
 import facebookIcon from "../../public/images/icon-facebook.png";
 import instagramIcon from "../../public/images/icon-instagram.png";
+import locationIcon from "../../public/images/icon-location.svg";
+import logo from "../../public/images/logo.svg";
 ---
 
 <!DOCTYPE html>
@@ -52,11 +54,13 @@ import instagramIcon from "../../public/images/icon-instagram.png";
       <slot />
     </main>
 
-    <footer class="bg-[#0B1524] pt-64 pb-32">
-      <div class="container mx-auto px-16 md:px-20">
+    <footer class="bg-[#0B1524] pt-48 pb-32">
+      <div class="container mx-auto px-16 md:px-20 flex flex-col gap-12">
+        <div><img src={logo} class="w-32 h-auto" /></div>
         <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-8 gap-16">
           <!-- Column 1 -->
-          <div class="md:col-span-1 xl:col-span-3">
+          <div class="md:col-span-1 xl:col-span-3 flex flex-row gap-8">
+            <img src={locationIcon} alt="Logo" class="w-8 h-8 mt-1" />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -65,13 +69,13 @@ import instagramIcon from "../../public/images/icon-instagram.png";
 
           <!-- Column 2 -->
           <div class="md:col-span-1 xl:col-span-2 flex flex-col gap-4">
-            <div class="flex flex-row items-center gap-3">
+            <div class="flex flex-row items-center gap-8">
               <div class="flex justify-center">
                 <img src={phoneIcon} alt="Phone Icon" />
               </div>
               <div>+1-543-123-4567</div>
             </div>
-            <div class="flex flex-row items-center gap-3">
+            <div class="flex flex-row items-center gap-8">
               <div class="items-center justify-center">
                 <img src={emailIcon} alt="Email Icon" />
               </div>
@@ -90,7 +94,7 @@ import instagramIcon from "../../public/images/icon-instagram.png";
           </div>
 
           <!-- Column 4 -->
-          <div class="xl:col-span-1">
+          <div class="xl:col-span-1 mt-[-45px] lg:mt-0">
             <ul class="flex flex-col gap-4">
               <li><a href="#">Contact Us</a></li>
               <li><a href="#">Terms</a></li>
